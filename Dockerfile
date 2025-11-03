@@ -42,7 +42,7 @@ ARG MAIL_PW
 ENV MAIL_PW=${MAIL_PW}
 
 # 작업 디렉토리 설정
-WORKDIR /app
+WORKDIR /docker-kok
 
 # Gradle wrapper 및 프로젝트 파일 복사
 # COPY <src> <dest>
