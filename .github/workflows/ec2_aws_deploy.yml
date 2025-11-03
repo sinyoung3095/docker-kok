@@ -31,9 +31,9 @@ jobs:
       run: |
         ssh -i ~/.ssd/id_rsa ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST}} << EOF
           cd /home/ubuntu/docker-kok
-          docker stop app || true
-          docker rm app || true
-          docker rmi app || true
+          docker stop docker-kok || true
+          docker rm docker-kok || true
+          docker rmi docker-kok || true
           docker build --build-arg JWT_SECRET=${{ secrets.JWT_SECRET }} \
             --build-arg EC2_HOST=${{ secrets.EC2_HOST }} \
             --build-arg EC2_DATABASE_HOST=${{ secrets.EC2_DATABASE_HOST }} \
